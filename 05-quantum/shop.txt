@@ -1,0 +1,7 @@
+# 서점 서비스 의존 관계
+# sync = 응답을 기다리는 호출, async = 메시지만 남기는 호출, db = 같은 DB를 쓰는 서비스들
+sync   order    payment
+sync   order    notify
+sync   order    stock
+async  order    review
+db     shop_db  catalog  stock

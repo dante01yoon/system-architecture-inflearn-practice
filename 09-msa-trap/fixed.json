@@ -1,0 +1,13 @@
+{
+ "deploys": [
+  ["order"],
+  ["stock"],
+  ["catalog"],
+  ["order", "payment"],
+  ["stock"],
+  ["order"]
+ ],
+ "entries": ["order"],
+ "calls": {"order": ["catalog", "payment"]},
+ "dbs": {"order": "order_db", "stock": "stock_db", "catalog": "catalog_db", "payment": "payment_db"}
+}

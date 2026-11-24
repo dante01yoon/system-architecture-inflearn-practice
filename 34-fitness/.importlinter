@@ -1,0 +1,10 @@
+[importlinter]
+root_package = bookshop
+
+[importlinter:contract:layers]
+name = 서점 층은 위에서 아래로만
+type = layers
+layers =
+    bookshop.web
+    bookshop.orders
+    bookshop.pricing | bookshop.storage
